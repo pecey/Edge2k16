@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+	<!--<link rel="stylesheet" type="text/css" href="css/materialize.css">-->
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+	<nav style="position: fixed; bottom: 0; left: 0; width: 100%; height: 50px">
+		<ul>
+			<li>ComputeAid</li>
+			<li>Robotics</li>
+			<li>Food For Fun</li>
+		</ul>
+	</nav>
+	<style type="text/css">
+		html,body,.container{
+			height: 100%;
+			width: 100%;
+		}
+		body{
+			margin: 0 auto;
+			width: 100%;
+			text-align: center;
+		}
+		#robot{
+			height: 300px;
+		}
+		.row{
+			width: 100%;
+			height: 100px;
+		}
+		.event-name{
+			display: table;
+			height: 100%;
+		}
+		.event-name span{
+			display: table-cell;
+			height: 100%;
+			width: 100%;
+			text-align: center;
+			vertical-align: middle;
+			visibility: hidden;
+		}
+	</style>
+	<div class="container">
+		<div class="row">
+			<div class="col l4 event-name"></div>
+			<div class="col l4 event-name"><span id="event-1">Event 1</span></div>
+			<div class="col l4 event-name"></div>
+		</div>
+		<div class="row" style="height:400px">
+			<div class="col l4 event-name"><span id="event-4">Event 4</span></div>
+			<div class="col l4 event-image">
+				<span><object type="image/svg+xml" data="images/robot.svg" id="robot"></object></span>
+			</div>
+			<div class="col l4 event-name"><span id="event-2">Event 2</span></div>
+		</div>
+		<div class="row">
+			<div class="col l4 event-name"></div>
+			<div class="col l4 event-name"><span id="event-3">Event 3</span></div>
+			<div class="col l4 event-name"></div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$("body").mousemove(function(e){
+			$("#robot").css({
+				"transform":"rotateX("+10+"deg)"
+			});
+		});
+		$(document).ready(function(){
+			$("#event-1").addClass("animated slideInUp").css("visibility","visible");
+			setTimeout(function(){$("#event-2").addClass("animated slideInLeft").css("visibility","visible")}, 1000);
+			setTimeout(function(){$("#event-3").addClass("animated slideInDown").css("visibility","visible")},2000);
+			setTimeout(function(){$("#event-4").addClass("animated slideInRight").css("visibility","visible")},3000);
+			
+		});
+	</script>
+</body>
+</html>
