@@ -1,0 +1,17 @@
+body{
+	overflow: hidden;
+}
+#event-slider{
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+}
+
+ul li{
+	display: inline-block;
+}
+.event-slider-menu{
+	height: 30px;
+	margin-right: 10px;
+}
