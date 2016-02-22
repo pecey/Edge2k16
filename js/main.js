@@ -82,16 +82,22 @@
 	// event binding
 	function initEvents() {
 		// open items
-		zoomCtrl.addEventListener('click', function() {
+		/*zoomCtrl.addEventListener('click', function() {
 			openItem(items[current]);
-		});
+		});*/
+
+		$("#event-slider ul li").click(function(){
+			console.log("Click");
+			var next = $(this).data("item");
+			navigate(next);
+		})
 
 		// close content
 		closeContentCtrl.addEventListener('click', closeContent);
 
 		// navigation
-		navRightCtrl.addEventListener('click', function() { navigate('right'); });
-		navLeftCtrl.addEventListener('click', function() { navigate('left'); });
+		//navRightCtrl.addEventListener('click', function() { navigate('right'); });
+		//navLeftCtrl.addEventListener('click', function() { navigate('left'); });
 
 		// window resize
 		window.addEventListener('resize', throttle(function(ev) {
@@ -237,21 +243,13 @@
 		el.style.transform = 'translate3d(' + Number(win.width/2 - (zoomerOffset.left+zoomerAreaSize.width/2)) + 'px,' + Number(win.height/2 - (zoomerOffset.top+zoomerAreaSize.height/2)) + 'px,0) scale3d(' + scaleVal + ',' + scaleVal + ',1)';
 	}
 
-	$("#event-slider ul li").click(function(){
-			var next = $(this).data("item");
-			navigate(next);
-		})
-
-
-
-
 
 	// navigate the slider
-	function navigate(item) {
+	function navigate(next) {
 		var itemCurrent = items[current],
 			currentEl = itemCurrent.querySelector('.slide__mover'),
-			currentTitleEl = itemCurrent.querySelector('.slide__title');
-
+			currentTitleEl = itemCurrent.querySelector('.slide-title'),
+			dir;
 		// update new current value
 		/*if( dir === 'right' ) {
 			current = current < itemsTotal-1 ? current + 1 : 0;
@@ -259,12 +257,16 @@
 		else {
 			current = current > 0 ? current - 1 : itemsTotal-1;
 		}*/
-		current = item;
+		if (next>current)
+			dir = "right";
+		else
+			dir = "left";
+		current = next;
 
 		var itemNext = items[current],
 			nextEl = itemNext.querySelector('.slide__mover'),
-			nextTitleEl = itemNext.querySelector('.slide__title'),
-			dir = "right";
+			nextTitleEl = itemNext.querySelector('.slide-title');
+
 		
 		// animate the current element out
 		dynamics.animate(currentEl, { opacity: 0, translateX: dir === 'right' ? -1*currentEl.offsetWidth/2 : currentEl.offsetWidth/2, rotateZ: dir === 'right' ? -10 : 10 }, {
