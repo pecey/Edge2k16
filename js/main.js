@@ -1,17 +1,5 @@
-/**
- * main.js
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2015, Codrops
- * http://www.codrops.com
- */
-;(function(window) {
-
+(function(window) {
 	'use strict';
-
 	var bodyEl = document.body, 
 		docElem = window.document.documentElement,
 		support = { transitions: Modernizr.csstransitions },
@@ -44,9 +32,9 @@
 		// total number of items
 		itemsTotal = items.length,
 		// navigation controls/arrows
-		navRightCtrl = sliderEl.querySelector('.button--nav-next'),
-		navLeftCtrl = sliderEl.querySelector('.button--nav-prev'),
-		zoomCtrl = sliderEl.querySelector('.button--zoom'),
+		//navRightCtrl = sliderEl.querySelector('.button--nav-next'),
+		//navLeftCtrl = sliderEl.querySelector('.button--nav-prev'),
+		//zoomCtrl = sliderEl.querySelector('.button--zoom'),
 		// the main content element
 		contentEl = document.querySelector('.content'),
 		// close content control
@@ -75,6 +63,8 @@
 		};
 	}
 
+
+	// Initialise stuff
 	function init() {
 		initEvents();
 	}
@@ -86,9 +76,31 @@
 			openItem(items[current]);
 		});*/
 
+		// Hover animation
+		$(".slide-title-wrapper").hover(
+			function(){
+				$(this).animate({
+					backgroundColor:"#F1EFEF",
+					color:"#222125"
+				}, 400)
+		},	function(){
+				$(this).animate({
+					backgroundColor:"transparent",
+					color:"#fff"
+				},400)
+		});
+		
+		
+		// Event handler for showing events under categories
+		$(".slide-title-wrapper").click(function(){
+			openItem(items[current]);
+		})
+
+		// Function to handle navigation
 		$("#event-slider ul li").click(function(){
-			console.log("Click");
 			var next = $(this).data("item");
+			if (current == next)
+				return false;
 			navigate(next);
 		})
 
@@ -257,10 +269,13 @@
 		else {
 			current = current > 0 ? current - 1 : itemsTotal-1;
 		}*/
+		// Decide which direction to swipe
 		if (next>current)
 			dir = "right";
 		else
 			dir = "left";
+
+		// Set current to the next element
 		current = next;
 
 		var itemNext = items[current],
@@ -289,6 +304,15 @@
 		dynamics.css(itemNext, { opacity: 1, visibility: 'visible' });
 		dynamics.css(nextEl, { opacity: 0, translateX: dir === 'right' ? nextEl.offsetWidth/2 : -1*nextEl.offsetWidth/2, rotateZ: dir === 'right' ? 10 : -10 });
 
+		// set the right properties for the next title to come in
+		dynamics.css(nextTitleEl, { translateX: dir === 'right' ? 250 : -250, opacity: 0 });
+		// animate the next title in
+		dynamics.animate(nextTitleEl, { translateX: 0, opacity: 1 }, {
+			type: dynamics.bezier,
+			points: [{"x":0,"y":0,"cp":[{"x":0.2,"y":1}]},{"x":1,"y":1,"cp":[{"x":0.3,"y":1}]}],
+			duration: 650
+		});
+
 		// animate the next element in
 		dynamics.animate(nextEl, { opacity: 1, translateX: 0 }, {
 			type: dynamics.spring,
@@ -300,14 +324,6 @@
 			}
 		});
 
-		// set the right properties for the next title to come in
-		dynamics.css(nextTitleEl, { translateX: dir === 'right' ? 250 : -250, opacity: 0 });
-		// animate the next title in
-		dynamics.animate(nextTitleEl, { translateX: 0, opacity: 1 }, {
-			type: dynamics.bezier,
-			points: [{"x":0,"y":0,"cp":[{"x":0.2,"y":1}]},{"x":1,"y":1,"cp":[{"x":0.3,"y":1}]}],
-			duration: 650
-		});
 	}
 
 	// disallow scrolling (on the scrollContainer)

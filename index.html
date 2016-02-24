@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>EDGE X</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<!-- Feather Icons -->
 	<link rel="stylesheet" type="text/css" href="fonts/feather/style.css">
 	<!-- General demo styles & header -->
@@ -13,6 +13,7 @@
 	<!-- Component styles -->
 	<link rel="stylesheet" type="text/css" href="css/component.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/honeycombs.css">
 	<link rel="stylesheet" type="text/css" href="css/custom.css" />
 
 	<script src="js/modernizr.custom.js"></script>
@@ -33,12 +34,17 @@
 			</nav>
 		</header>
 		<nav id="event-slider">
-			<ul>
+			<ul id="event-menu-icons">
 				<li data-item="0"><img class="event-slider-menu" src="images/logos/computing.png"></li>
-				<li data-item="1"><img class="event-slider-menu" src="images/logos/gaming.png"></li>
-				<li data-item="2"><img class="event-slider-menu" src="images/logos/robotics.png"></li>
+				<li data-item="1"><img class="event-slider-menu" src="images/logos/robotics.png"></li>
+				<li data-item="2"><img class="event-slider-menu" src="images/logos/gaming.png"></li>
 				<li data-item="3"><img class="event-slider-menu" src="images/logos/food.png"></li>
-				<li data-item="4"><img class="event-slider-menu" src="images/logos/newron.png"></li>
+				<li data-item="4"><img class="event-slider-menu" src="images/logos/money_matters.png"></li>
+				<li data-item="5"><img class="event-slider-menu" src="images/logos/photography.png"></li>
+				<li data-item="6"><img class="event-slider-menu" src="images/logos/newron.png"></li>
+				<li data-item="7"><img class="event-slider-menu" src="images/logos/innovati.png"></li>
+				<li data-item="8"><img class="event-slider-menu" src="images/logos/creative.png"></li>
+				<li data-item="9"><img class="event-slider-menu" src="images/logos/fun.png"></li>
 				<!--
 				<li><img class="event-slider-menu" src="images/logos/money_matters.png"></li>
 				<li><img class="event-slider-menu" src="images/logos/photography.png"></li>
@@ -46,15 +52,41 @@
 				<li><img class="event-slider-menu" src="images/logos/innovati.png"></li>
 				-->
 			</ul>
+			<ul id="other-menu-icons">
+				<li data-item="11"><img class="event-slider-menu" src="images/inr.png"></li>
+			</ul>
+			<div class="clearfix"></div>
 		</nav>
 		<!-- Grid -->
+		<div id="layers">
+		  <div class="layer layer-1"></div>
+		  <div class="layer layer-2"></div>
+		  <div class="layer layer-3"></div>
+		  <div class="layer layer-4"></div>
+		  <div class="layer layer-5"></div>
+		</div>
 		<section class="slider">
-			<div class="slide slide--current" data-content="content-1">
+		<!-- Compute Aid -->
+			<div class="slide slide--current" data-content="computeaid">
 				<div class="slide__mover">
 					<div class="zoomer flex-center">
 						<div class="preview">
-							<img src="images/robot.svg" height="200"/>
+							<img src="images/imac.png"/>
 							<div class="zoomer__area zoomer__area--size-2"></div>
+						</div>
+					</div>
+				</div>
+				<div class="slide-title-wrapper">
+					<h2 class="slide-title">Compute Aid</h2>
+				</div>
+			</div>
+		<!-- Robotics -->
+			<div class="slide" data-content="robotics">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<div class="preview">
+							<img src="images/robot_mod.png"/>
+							<div class="zoomer__area zoomer__area--size-4"></div>
 						</div>
 					</div>
 				</div>
@@ -62,25 +94,27 @@
 					<h2 class="slide-title">Robotics</h2>
 				</div>
 			</div>
-			<div class="slide" data-content="content-2">
+		<!-- Cyber Crusade -->
+			<div class="slide" data-content="cybercrusade">
 				<div class="slide__mover">
 					<div class="zoomer flex-center">
 						<div class="preview">
-							<img src="images/robot.svg" height="200"/>
-							<div class="zoomer__area zoomer__area--size-4"></div>
+							<img src="images/robot_mod.png" height="200"/>
+							<div class="zoomer__area zoomer__area--size-3"></div>
 						</div>
 					</div>
 				</div>
 				<div class="slide-title-wrapper">
-					<h2 class="slide-title">ComputeAid</h2>
+					<h2 class="slide-title">Cyber Crusade</h2>
 				</div>
 			</div>
-			<div class="slide" data-content="content-3">
+		<!-- Food for Fun -->
+			<div class="slide" data-content="foodforfun">
 				<div class="slide__mover">
 					<div class="zoomer flex-center">
 						<div class="preview">
-							<img src="images/robot.svg" height="200"/>
-							<div class="zoomer__area zoomer__area--size-3"></div>
+							<img src="images/robot_mod.png" height="200"/>
+							<div class="zoomer__area zoomer__area--size-5"></div>
 						</div>
 					</div>
 				</div>
@@ -88,12 +122,55 @@
 					<h2 class="slide-title">Food For Fun</h2>
 				</div>
 			</div>
-			<div class="slide" data-content="content-4">
+		<!-- Money Matters -->
+			<div class="slide" data-content="moneymatters">
 				<div class="slide__mover">
 					<div class="zoomer flex-center">
-						<div class="preview">
-							<img src="images/robot.svg" height="200"/>
-							<div class="zoomer__area zoomer__area--size-5"></div>
+						<div class="preview rounded">
+							<img src="images/robot_mod.png" height="200"/>
+							<div class="zoomer__area zoomer__area--size-1"></div>
+						</div>
+					</div>
+				</div>
+				<div class="slide-title-wrapper">
+					<h2 class="slide-title">Money Matters</h2>
+				</div>
+			</div>
+		<!-- In Focus -->			
+			<div class="slide" data-content="infocus">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<div class="preview rounded">
+							<img src="images/robot_mod.png" height="200"/>
+							<div class="zoomer__area zoomer__area--size-1"></div>
+						</div>
+					</div>
+				</div>
+				<div class="slide-title-wrapper">
+					<h2 class="slide-title">In Focus</h2>
+				</div>
+			</div>
+		<!-- Newron -->
+			<div class="slide" data-content="newron">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<div class="preview rounded">
+							<img src="images/robot_mod.png" height="200"/>
+							<div class="zoomer__area zoomer__area--size-1"></div>
+						</div>
+					</div>
+				</div>
+				<div class="slide-title-wrapper">
+					<h2 class="slide-title">Newron</h2>
+				</div>
+			</div>
+		<!-- Innovati -->
+			<div class="slide" data-content="innovati">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<div class="preview rounded">
+							<img src="images/robot_mod.png" height="200"/>
+							<div class="zoomer__area zoomer__area--size-1"></div>
 						</div>
 					</div>
 				</div>
@@ -101,11 +178,26 @@
 					<h2 class="slide-title">Innovati</h2>
 				</div>
 			</div>
-			<div class="slide" data-content="content-5">
+		<!-- Create It -->
+			<div class="slide" data-content="createit">
 				<div class="slide__mover">
 					<div class="zoomer flex-center">
 						<div class="preview rounded">
-							<img src="images/robot.svg" height="200"/>
+							<img src="images/robot_mod.png" height="200"/>
+							<div class="zoomer__area zoomer__area--size-1"></div>
+						</div>
+					</div>
+				</div>
+				<div class="slide-title-wrapper">
+					<h2 class="slide-title">Create It</h2>
+				</div>
+			</div>
+		<!-- Just Like That -->
+			<div class="slide" data-content="justlikethat">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<div class="preview rounded">
+							<img src="images/robot_mod.png" height="200"/>
 							<div class="zoomer__area zoomer__area--size-1"></div>
 						</div>
 					</div>
@@ -114,6 +206,37 @@
 					<h2 class="slide-title">Just Like That</h2>
 				</div>
 			</div>
+
+
+			<!-- Sponsors -->
+			<div class="slide" data-content="sponsors">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<div class="preview rounded">
+							<img src="images/robot_mod.png" height="200"/>
+							<div class="zoomer__area zoomer__area--size-1"></div>
+						</div>
+					</div>
+				</div>
+				<div class="slide-title-wrapper">
+					<h2 class="slide-title">Sponsors</h2>
+				</div>
+			</div>
+			<!-- Know the Team -->
+			<div class="slide" data-content="theteam">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<div class="preview rounded">
+							<img src="images/robot_mod.png" height="200"/>
+							<div class="zoomer__area zoomer__area--size-1"></div>
+						</div>
+					</div>
+				</div>
+				<div class="slide-title-wrapper">
+					<h2 class="slide-title">The Team</h2>
+				</div>
+			</div>
+
 			<!--
 			<nav class="slider__nav">
 				<button class="button button--nav-prev"><i class="icon icon--arrow-left"></i><span class="text-hidden">Previous product</span></button>
@@ -123,33 +246,192 @@
 		</section>
 		<!-- /slider-->
 		<section class="content">
+			<!-- Robotics -->
 			<div class="content__item" id="content-1" style="width: 100%;">
-				<img class="content__item-img rounded-right" src="images/robot.svg" alt="Apple Watch Content" />
+				<img class="content__item-img rounded-right" src="images/robot_mod.png" alt="Apple Watch Content" />
 				<div class="content__item-inner" style="width: 100%;">
 					<h2>Robotics</h2>
 					<div class="row">
-						<div class="col-md-4 event-name">Event 1</div>
-						<div class="col-md-4 event-name">Event 2</div>
-						<div class="col-md-4 event-name">Event 3</div>
+						<div class="col-md-4 event-name">City Rush</div>
+						<div class="col-md-4 event-name">Street Soccer</div>
+						<div class="col-md-4 event-name">Tour De Track</div>
 					</div>
-					<style type="text/css">
-						.event-name{
-							height: 200px;
-
-						}
-					</style>
+					<div class="row">
+						<div class="col-md-4 event-name">Hedge D Maze</div>
+						<div class="col-md-4 event-name">Shadows</div>
+						<div class="col-md-4 event-name">Make a Bot</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 event-name">Blitzkreig Apocalypse</div>
+						<div class="col-md-4 event-name">Gather the litter</div>
+					</div>
 				</div>
 			</div>
-			
+			<!-- ComputeAid -->
+			<div class="content__item" id="computeaid" style="width: 100%;">
+				<img class="content__item-img rounded-right" src="images/robot_mod.png" alt="Apple Watch Content" />
+				<div class="content__item-inner" style="width: 100%;">
+					<h2>ComputeAid</h2>
+					<div class="row">
+						<div class="col-md-4 event-name">Flawless</div>
+						<div class="col-md-4 event-name">Bug Hunt</div>
+						<div class="col-md-4 event-name">CryptoQuest</div>
+					</div>
+				</div>
+			</div>
+			<!-- Cyber Crusade -->
+			<div class="content__item" id="cybercrusade" style="width: 100%;">
+				<img class="content__item-img rounded-right" src="images/robot_mod.png" alt="Apple Watch Content" />
+				<div class="content__item-inner" style="width: 100%;">
+					<h2>Cyber Crusade</h2>
+					<div class="row">
+						<div class="col-md-4 event-name">Flawless</div>
+						<div class="col-md-4 event-name">Bug Hunt</div>
+						<div class="col-md-4 event-name">CryptoQuest</div>
+					</div>
+				</div>
+			</div>
+			<!-- Food For Fun -->
+			<div class="content__item" id="foodforfun" style="width: 100%;">
+				<img class="content__item-img rounded-right" src="images/robot_mod.png" alt="Apple Watch Content" />
+				<div class="content__item-inner" style="width: 100%;">
+					<h2>Food For Fun</h2>
+					<div class="row">
+						<div class="col-md-4 event-name">Flawless</div>
+						<div class="col-md-4 event-name">Bug Hunt</div>
+						<div class="col-md-4 event-name">CryptoQuest</div>
+					</div>
+				</div>
+			</div>
+			<!-- Innovati -->
+			<div class="content__item" id="innovati" style="width: 100%;">
+				<img class="content__item-img rounded-right" src="images/robot_mod.png" alt="Apple Watch Content" />
+				<div class="content__item-inner" style="width: 100%;">
+					<h2>Innovati</h2>
+					<div class="row">
+						<div class="col-md-4 event-name">Flawless</div>
+						<div class="col-md-4 event-name">Bug Hunt</div>
+						<div class="col-md-4 event-name">CryptoQuest</div>
+					</div>
+				</div>
+			</div>
+			<!-- Just Like That -->
+			<div class="content__item" id="justlikethat" style="width: 100%;">
+				<img class="content__item-img rounded-right" src="images/robot_mod.png" alt="Apple Watch Content" />
+				<div class="content__item-inner" style="width: 100%;">
+					<h2>Just Like That</h2>
+					<div class="row">
+						<div class="col-md-4 event-name">Flawless</div>
+						<div class="col-md-4 event-name">Bug Hunt</div>
+						<div class="col-md-4 event-name">CryptoQuest</div>
+					</div>
+				</div>
+			</div>		
+			<!-- Create It -->
+			<div class="content__item" id="createit" style="width: 100%;">
+				<img class="content__item-img rounded-right" src="images/robot_mod.png" alt="Apple Watch Content" />
+				<div class="content__item-inner" style="width: 100%;">
+					<h2>Create It</h2>
+					<div class="row">
+						<div class="col-md-4 event-name">Flawless</div>
+						<div class="col-md-4 event-name">Bug Hunt</div>
+						<div class="col-md-4 event-name">CryptoQuest</div>
+					</div>
+				</div>
+			</div>	
+
+			<!-- Sponsors -->
+			<div class="content__item" id="sponsors" style="width: 100%;">
+				<img class="content__item-img rounded-right" src="images/robot_mod.png" alt="Apple Watch Content" />
+				<div class="content__item-inner" style="width: 100%;">
+					<h2>Sponsors</h2>
+					<div class="row">
+						<div class="col-md-4 event-name">Flawless</div>
+						<div class="col-md-4 event-name">Bug Hunt</div>
+						<div class="col-md-4 event-name">CryptoQuest</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- The Team -->
+			<div class="content__item" id="theteam" style="width: 100%;">
+				<img class="content__item-img rounded-right" src="images/robot_mod.png" alt="Apple Watch Content" />
+				<div class="content__item-inner" style="width: 80%;">
+					<div class="honeycombs">
+					        <div class="comb">
+					            <img src="images/members/Pratyush.jpg" />
+					            <span>Pratyush Raj</span>
+					        </div>
+					        <div class="comb">
+					            <img src="images/members/Raj.jpg" />
+					            <span>Pratyush Raj</span>
+					        </div>
+					        <div class="comb">
+					            <img src="images/members/Shobhit.jpg" />
+					            <span>Pratyush Raj</span>
+					        </div>
+					        <div class="comb">
+					            <img src="images/members/Utsav.jpg" />
+					            <span>Pratyush Raj</span>
+					        </div>
+					        <div class="comb">
+					            <img src="images/members/Basu.jpg" />
+					            <span>Pratyush Raj</span>
+					        </div>
+					        <div class="comb">
+					            <img src="images/members/Sen.jpg" />
+					            <span>Pratyush Raj</span>
+					        </div>
+					        <div class="comb">
+					            <img src="images/members/Ashish.jpg" />
+					            <span>Pratyush Raj</span>
+					        </div>
+					        <div class="comb">
+					            <img src="images/members/Shubham.jpg" />
+					            <span>Pratyush Raj</span>
+					        </div>
+					        <div class="comb">
+					            <img src="images/members/Rohan.jpg" />
+					            <span>Pratyush Raj</span>
+					        </div>
+					        <div class="comb">
+					            <img src="images/members/Richa.jpg" />
+					            <span>Pratyush Raj</span>
+					        </div>
+					          <div class="comb">
+					            <img src="images/members/Puja.jpg" />
+					            <span>Pratyush Raj</span>
+					        </div>
+					          <div class="comb">
+					            <img src="images/members/Prashant.jpg" />
+					            <span>Pratyush Raj</span>
+					        </div>
+					        <div class="comb">
+					            <img src="images/members/Ravi.jpg" />
+					            <span>Pratyush Raj</span>
+					        </div>
+					        <div class="comb">
+					            <img src="images/members/Rittika.jpg" />
+					            <span>Pratyush Raj</span>
+					        </div>
+					</div>
+				</div>
+			</div>	
+
+
 			<button class="button button--close"><i class="icon icon--circle-cross"></i><span class="text-hidden">Close content</span></button>
 		</section>
 	</div>
+	<footer>
+		Made with love
+	</footer>
 	<script src="js/jquery.js"></script>
 	<script src="js/classie.js"></script>
+	<script type="text/javascript" src="js/jquery.color-2.1.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.homeycombs.js"></script>
 	<script src="js/dynamics.min.js"></script>
 	<script src="js/main.js"></script>
-	<script type="text/javascript">
-
-	</script>
+	<script src="js/star.js"></script>
+	
 </body>
 </html>
