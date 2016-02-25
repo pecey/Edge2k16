@@ -18,7 +18,7 @@ $(function(){
   var dots = {
     nb: 100,
     distance: 100,
-    d_radius: 550,
+    d_radius: 100,
     array: []
   };
 
@@ -46,9 +46,12 @@ $(function(){
   
   function Color(min) {
     min = min || 0;
-    this.r = colorValue(min);
-    this.g = colorValue(min);
-    this.b = colorValue(min);
+    //this.r = colorValue(min);
+    //this.g = colorValue(min);
+    //this.b = colorValue(min);
+    this.r = 173;
+    this.g = 159;
+    this.b = 159;
     this.style = createColorStyle(this.r, this.g, this.b);
   }
 

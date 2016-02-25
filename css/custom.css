@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Arkhip';
+  src: url('../fonts/Arkhip_font.ttf');
+}
+
+
 /* General */
 
 body{
@@ -37,8 +43,14 @@ ul li{
 
 #social-block a{
     color: white;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    height: 1.2em;
 }
-
+.bp-header nav a:hover{
+  background: #222125;
+}
 /* Slide */
 
 .slider{
@@ -51,7 +63,6 @@ ul li{
     height: 80px;
     background:transparent;
     /* z-index: 10; */
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16)inset,0 2px 10px 0 rgba(0,0,0,0.12)inset;
     color: white;
 }
 .slide-title{
@@ -61,6 +72,7 @@ ul li{
     /* padding: 1em 0 0 0; */
     display: table-cell;
     vertical-align: middle;
+    font-family: 'Arkhip';
 }
 
 
@@ -77,7 +89,7 @@ ul li{
 
 
 /* Stars */
-
+/*
 #layers {
   width: 100%;
   height: 100%;
@@ -161,3 +173,4 @@ ul li{
     opacity: 0;
   }
 }
+*/
