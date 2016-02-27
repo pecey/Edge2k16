@@ -2,7 +2,10 @@
   font-family: 'Arkhip';
   src: url('../fonts/Arkhip_font.ttf');
 }
-
+@font-face{
+  font-family: 'Adam';
+  src: url('../fonts/Adam_pro.otf');
+}
 
 /* General */
 

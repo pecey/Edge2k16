@@ -81,12 +81,14 @@
 			function(){
 				$(this).animate({
 					backgroundColor:"#F1EFEF",
-					color:"#222125"
+					color:"#222125",
+					"box-shadow": "0 2px 5px 0 rgba(0,0,0,0.16)inset,0 2px 10px 0 rgba(0,0,0,0.12)inset"
 				}, 400)
 		},	function(){
 				$(this).animate({
 					backgroundColor:"transparent",
-					color:"#fff"
+					color:"#fff",
+					"box-shadow":"none"
 				},400)
 		});
 		
@@ -262,6 +264,7 @@
 			currentEl = itemCurrent.querySelector('.slide__mover'),
 			currentTitleEl = itemCurrent.querySelector('.slide-title'),
 			dir;
+		console.log(next);
 		// update new current value
 		/*if( dir === 'right' ) {
 			current = current < itemsTotal-1 ? current + 1 : 0;
@@ -316,7 +319,7 @@
 		// animate the next element in
 		dynamics.animate(nextEl, { opacity: 1, translateX: 0 }, {
 			type: dynamics.spring,
-			duration: 2000,
+			duration: 200,
 			friction: 600,
 			complete: function() {
 				items.forEach(function(item) { classie.remove(item, 'slide--current'); });
