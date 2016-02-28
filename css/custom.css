@@ -177,3 +177,61 @@ ul li{
   }
 }
 */
+
+/* Events */
+.event-image{
+          height: 60px;
+          width: auto;
+          margin: 0 auto;
+        }
+        .event{
+          position: relative;
+          height: 175px;
+          text-align: center;
+          line-height: 175px;
+          border: none;
+        }
+        .event-name{
+          position: absolute;
+            bottom: 0px;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            margin: 0 auto;
+            left: 0px;
+            color: #FF8A00;
+        }
+/* Animation */
+.come-in {
+  transform: translateY(150px);
+  animation: come-in 2s ease forwards;
+}
+.come-in:nth-child(odd) {
+  animation-duration: 0.5s; /* So they look staggered */
+}
+
+@keyframes come-in {
+  to { transform: translateY(0); }
+}
+
+@-webkit-keyframes FadeIn { 
+  0% { opacity:0; -webkit-transform:scale(.1);}
+  85% {opacity:1; -webkit-transform:scale(1.05);}
+  100% {-webkit-transform:scale(1); }
+}
+
+.fade-in{
+  -webkit-animation: FadeIn 1.5s linear; -webkit-animation-fill-mode:both; 
+}
+
+.fade-in:nth-child(1){ -webkit-animation-delay: .5s }
+.fade-in:nth-child(2){ -webkit-animation-delay:  1s }
+.fade-in:nth-child(3){ -webkit-animation-delay: 1.5s }
+.fade-in:nth-child(4){ -webkit-animation-delay: 2s }
+.fade-in:nth-child(5){ -webkit-animation-delay: 2.5s }
+.fade-in:nth-child(6){ -webkit-animation-delay: 3s }
+.fade-in:nth-child(7){ -webkit-animation-delay: 3.5s }
+.fade-in:nth-child(8){ -webkit-animation-delay: 4s }
+.fade-in:nth-child(9){ -webkit-animation-delay: 4.5s }
+
+

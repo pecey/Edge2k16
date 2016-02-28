@@ -176,6 +176,7 @@
 			classie.add(contentItem, 'content__item--current');
 			classie.add(contentItem, 'content__item--reset');
 
+			$(".content__item--current .content__item-inner .row").children(".event").addClass("fade-in");
 
 			// reset zoomer transform - back to its original position/transform without a transition
 			classie.add(zoomer, 'zoomer--notrans');
