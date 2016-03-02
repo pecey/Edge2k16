@@ -15,7 +15,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/honeycombs.css">
 	<link rel="stylesheet" type="text/css" href="css/custom.css" />
-
 	<script src="js/modernizr.custom.js"></script>
 </head>
 <body>
@@ -51,6 +50,7 @@
 				<li data-item="7"><img class="event-slider-menu" src="images/logos/innovati.png"></li>
 				<li data-item="8"><img class="event-slider-menu" src="images/logos/creative.png"></li>
 				<li data-item="9"><img class="event-slider-menu" src="images/logos/fun.png"></li>
+				<li data-item="10"><img class="event-slider-menu" src="images/logos/fun.png"></li>
 			</ul>
 			<ul id="other-menu-icons">
 				<li data-item="10"><img class="event-slider-menu" src="images/inr.png"></li>
@@ -72,7 +72,7 @@
 		<canvas style="position: absolute; z-index: -1; top:0px"></canvas>
 		<section class="slider">
 		<!-- Compute Aid -->
-			<div class="slide slide--current" data-content="computeaid">
+			<div class="slide" data-content="computeaid">
 				<div class="slide__mover">
 					<div class="zoomer flex-center">
 						<div class="preview">
@@ -174,7 +174,7 @@
 				<div class="slide__mover">
 					<div class="zoomer flex-center">
 						<div class="preview rounded">
-							<img src="images/robot_mod.png" height="200"/>
+							<img src="images/categories/Innovati.png" height="200"/>
 							<div class="zoomer__area zoomer__area--size-1"></div>
 						</div>
 					</div>
@@ -211,7 +211,20 @@
 					<h2 class="slide-title">Just Like That</h2>
 				</div>
 			</div>
-
+			<!-- Elevation -->
+			<div class="slide" data-content="elevation">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<div class="preview rounded">
+							<img src="images/robot_mod.png" height="200"/>
+							<div class="zoomer__area zoomer__area--size-1"></div>
+						</div>
+					</div>
+				</div>
+				<div class="slide-title-wrapper">
+					<h2 class="slide-title">Elevation</h2>
+				</div>
+			</div>
 			<!-- Campus Ambassador -->
 			<div class="slide" data-content="campusambassador">
 				<div class="slide__mover">
@@ -261,6 +274,17 @@
 				<button class="button button--zoom"><i class="icon icon--zoom"></i><span class="text-hidden">View details</span></button>
 				<button class="button button--nav-next"><i class="icon icon--arrow-right"></i><span class="text-hidden">Next product</span></button>
 			</nav>-->
+			<!-- Edge -->
+		<div class="slide slide--current" data-content="edge">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<div class="preview">
+							<img src="images/imac.png"/>
+							<div class="zoomer__area zoomer__area--size-2"></div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
 		<!-- /slid+er-->
 		<style type="text/css">
@@ -316,28 +340,28 @@
 					<div class="row">
 						<div class="col-md-4 event">
 							<img src="images/icons/computeaid/flawless.png" class="event-image">
-							<div class="event-name" data-name="Flawless">Flawless</div>
+							<div class="event-name" data-name="flawless">Flawless</div>
 							<div class="border-bottom"></div>
 						</div>
 						<div class="col-md-4 event">
 							<img src="images/icons/computeaid/Bug_Hunt.png" class="event-image">
-							<div class="event-name" data-name="Bug Hunt">Bug Hunt</div>
+							<div class="event-name" data-name="bughunt">Bug Hunt</div>
 						</div>
 						<div class="col-md-4 event">
 							<img src="images/icons/computeaid/Crypto_quest.png" class="event-image">
-							<div class="event-name" data-name="Crypto Quest">Crypto Quest</div>
+							<div class="event-name" data-name="cryptoquest">Crypto Quest</div>
 						</div>
 						<div class="col-md-4 event">
 							<img src="images/icons/computeaid/Code_mart.png" class="event-image">
-							<div class="event-name" data-name="Code Mart">Code Mart</div>
+							<div class="event-name" data-name="codemart">Code Mart</div>
 						</div>
 						<div class="col-md-4 event">
 							<img src="images/icons/computeaid/Code_out.png" class="event-image">
-							<div class="event-name" data-name="Code out">Code Out</div>
+							<div class="event-name" data-name="codeout">Code Out</div>
 						</div>
 						<div class="col-md-4 event">
 							<img src="images/icons/computeaid/Game_of_zones.png" class="event-image">
-							<div class="event-name" data-name="Game of Zones">Game of Zones</div>
+							<div class="event-name" data-name="gameofzones">Game of Zones</div>
 						</div>
 					</div>
 				</div>
@@ -350,37 +374,37 @@
 					<div class="row">
 						<div class="col-md-4 event">
 							<img src="images/icons/gaming/cs.png" class="event-image">
-							<div class="event-name" data-name="Flawless">CS College League</div>
+							<div class="event-name" data-name="cscollegeleague">CS College League</div>
 							<div class="border-bottom"></div>
 						</div>
 						<div class="col-md-4 event">
 							<img src="images/icons/gaming/cs_go.png" class="event-image">
-							<div class="event-name" data-name="Flawless">CS Pro League</div>
+							<div class="event-name" data-name="csproleague">CS Pro League</div>
 							<div class="border-bottom"></div>
 						</div>
 						<div class="col-md-4 event">
 							<img src="images/icons/gaming/dota.png" class="event-image">
-							<div class="event-name" data-name="Flawless">Dota</div>
+							<div class="event-name" data-name="dota">Dota</div>
 							<div class="border-bottom"></div>
 						</div>
 						<div class="col-md-4 event">
 							<img src="images/icons/gaming/mortal_kombat.png" class="event-image">
-							<div class="event-name" data-name="Flawless">Mortal Kombat</div>
+							<div class="event-name" data-name="mortalkombat">Mortal Kombat</div>
 							<div class="border-bottom"></div>
 						</div>
 						<div class="col-md-4 event">
 							<img src="images/icons/gaming/nfs.png" class="event-image">
-							<div class="event-name" data-name="Flawless">Need For Speed</div>
+							<div class="event-name" data-name="needforspeed">Need For Speed</div>
 							<div class="border-bottom"></div>
 						</div>
 						<div class="col-md-4 event">
 							<img src="images/icons/gaming/fifa_11.png" class="event-image">
-							<div class="event-name" data-name="Flawless">FIFA College League</div>
+							<div class="event-name" data-name="fifacollegeleague">FIFA College League</div>
 							<div class="border-bottom"></div>
 						</div>
 						<div class="col-md-4 event">
 							<img src="images/icons/gaming/fifa_15.png" class="event-image">
-							<div class="event-name" data-name="Flawless">FIFA Pro League</div>
+							<div class="event-name" data-name="fifaproleague">FIFA Pro League</div>
 							<div class="border-bottom"></div>
 						</div>
 					</div>
@@ -435,6 +459,76 @@
 					</div>
 				</div>
 			</div>	
+			<!-- In Focus -->
+			<div class="content__item" id="infocus" style="width: 100%;">
+				<img class="content__item-img rounded-right" src="images/categories/Create_it.png" alt="Create It" />
+				<div class="content__item-inner" style="width: 100%;">
+					<h2>In Focus</h2>
+					<div class="row">
+						<div class="col-md-4 event">
+							<img src="images/icons/computeaid/flawless.png" class="event-image">
+							<div class="event-name" data-name="crumbs">Crumbs</div>
+							<div class="border-bottom"></div>
+						</div>
+						<div class="col-md-4 event">
+							<img src="images/icons/computeaid/flawless.png" class="event-image">
+							<div class="event-name" data-name="odyssey">Odyssey</div>
+							<div class="border-bottom"></div>
+						</div>
+						<div class="col-md-4 event">
+							<img src="images/icons/computeaid/flawless.png" class="event-image">
+							<div class="event-name" data-name="shootmup">Shoot 'M' Up</div>
+							<div class="border-bottom"></div>
+						</div>
+						<div class="col-md-4 event">
+							<img src="images/icons/computeaid/flawless.png" class="event-image">
+							<div class="event-name" data-name="instaclick">Insta Click</div>
+							<div class="border-bottom"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Newron -->
+			<div class="content__item" id="newron" style="width: 100%;">
+				<img class="content__item-img rounded-right" src="images/categories/Create_it.png" alt="Create It" />
+				<div class="content__item-inner" style="width: 100%;">
+					<h2>Newron</h2>
+					<div class="row">
+						<div class="col-md-4 event">
+							<img src="images/icons/computeaid/flawless.png" class="event-image">
+							<div class="event-name" data-name="Flawless">Mela Quiz</div>
+							<div class="border-bottom"></div>
+						</div>
+						<div class="col-md-4 event">
+							<img src="images/icons/computeaid/flawless.png" class="event-image">
+							<div class="event-name" data-name="Flawless">Biz Tech Quiz</div>
+							<div class="border-bottom"></div>
+						</div>
+						<div class="col-md-4 event">
+							<img src="images/icons/computeaid/flawless.png" class="event-image">
+							<div class="event-name" data-name="Flawless">Debate</div>
+							<div class="border-bottom"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Elevation -->
+			<div class="content__item" id="elevation" style="width: 100%;">
+				<img class="content__item-img rounded-right" src="images/categories/Create_it.png" alt="Create It" />
+				<div class="content__item-inner" style="width: 100%;">
+					<h2>Elevation</h2>
+					<div class="col-md-4 event">
+						<img src="images/icons/computeaid/flawless.png" class="event-image">
+						<div class="event-name" data-name="cadomania">Cad-o-mania</div>
+						<div class="border-bottom"></div>
+					</div>
+					<div class="col-md-4 event">
+						<img src="images/icons/computeaid/flawless.png" class="event-image">
+						<div class="event-name" data-name="nirmaan">Nirmaan</div>
+						<div class="border-bottom"></div>
+					</div>
+				</div>
+			</div>
 			<style type="text/css">
 				.sponsor-card{
 					text-align: center;
@@ -630,6 +724,19 @@
 			<button class="button button--close"><i class="icon icon--circle-cross"></i><span class="text-hidden">Close content</span></button>
 		</section>
 	</div>
+
+	<!-- Modal -->
+	<div id="event-modal" class="modal">
+    <button type="button" class="close" onclick="Custombox.close();">
+        <span>&times;</span><span class="sr-only">Close</span>
+    </button>
+    <h4 class="title">Modal title</h4>
+    <div class="text">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+	</div>
+
+
 	<footer>
 		Made with love
 	</footer>
@@ -646,8 +753,7 @@
 		$(document).ready(function(){
 			$(".inner-text").css("line-height",$(".hex_inner").css("height"));
 			$('.event').line(animationDuration, "2px", "bottom","onhover", backgroundColor);
-		})
-
+		});
 	</script>
 </body>
 </html>
