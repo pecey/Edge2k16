@@ -99,7 +99,7 @@
 		})
 
 		// Function to handle navigation
-		$("#event-slider ul li").click(function(){
+		$(".openIcon").click(function(){
 			var next = $(this).data("item");
 			if (current == next)
 				return false;

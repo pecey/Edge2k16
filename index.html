@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/honeycombs.css">
 	<link rel="stylesheet" type="text/css" href="css/custom.css" />
+		<script src="js/jquery.js"></script>
 	<script src="js/modernizr.custom.js"></script>
 </head>
 <body>
@@ -40,25 +41,76 @@
 			</nav>
 		</header>
 		<nav id="event-slider">
+		<div style="position: relative; width: 100%; height: 100%;">
 			<ul id="event-menu-icons">
-				<li data-item="0" data-toggle="tooltip" data-placement="top" title="computeaid"><img class="event-slider-menu" src="images/logos/compute_aid.png"></li>
-				<li data-item="1" data-toggle="tooltip" data-placement="top" title="robotics"><img class="event-slider-menu" src="images/logos/robotics.png"></li>
-				<li data-item="2" data-toggle="tooltip" data-placement="top" title="cyber crusade"><img class="event-slider-menu" src="images/logos/gaming.png"></li>
-				<li data-item="3" data-toggle="tooltip" data-placement="top" title="food for fun"><img class="event-slider-menu" src="images/logos/food.png"></li>
-				<li data-item="4" data-toggle="tooltip" data-placement="top" title="money matters"><img class="event-slider-menu" src="images/logos/money_matters_new.png"></li>
-				<li data-item="5" data-toggle="tooltip" data-placement="top" title="in focus"><img class="event-slider-menu" src="images/logos/photography.png"></li>
-				<li data-item="6" data-toggle="tooltip" data-placement="top" title="newron"><img class="event-slider-menu" src="images/logos/newron.png"></li>
-				<li data-item="7" data-toggle="tooltip" data-placement="top" title="innovati"><img class="event-slider-menu" src="images/logos/innovati.png"></li>
-				<li data-item="8" data-toggle="tooltip" data-placement="top" title="creative"><img class="event-slider-menu" src="images/logos/creative.png"></li>
-				<li data-item="9" data-toggle="tooltip" data-placement="top" title="just like that"><img class="event-slider-menu" src="images/logos/fun.png"></li>
-				<li data-item="10" data-toggle="tooltip" data-placement="top" title="elevation"><img class="event-slider-menu" src="images/logos/fun.png"></li>
+				<li class="openIcon" data-item="0" data-toggle="tooltip" data-placement="top" title="computeaid"><img class="event-slider-menu" src="images/logos/compute_aid.png"></li>
+				<li class="openIcon" data-item="1" data-toggle="tooltip" data-placement="top" title="robotics"><img class="event-slider-menu" src="images/logos/robotics.png"></li>
+				<li class="openIcon" data-item="2" data-toggle="tooltip" data-placement="top" title="cyber crusade"><img class="event-slider-menu" src="images/logos/gaming.png"></li>
+				<li class="openIcon" data-item="3" data-toggle="tooltip" data-placement="top" title="food for fun"><img class="event-slider-menu" src="images/logos/food.png"></li>
+				<li class="openIcon" data-item="4" data-toggle="tooltip" data-placement="top" title="money matters"><img class="event-slider-menu" src="images/logos/money_matters_new.png"></li>
+				<li class="openIcon" data-item="5" data-toggle="tooltip" data-placement="top" title="in focus"><img class="event-slider-menu" src="images/logos/photography.png"></li>
+				<li class="openIcon" data-item="6" data-toggle="tooltip" data-placement="top" title="newron"><img class="event-slider-menu" src="images/logos/newron.png"></li>
+				<li class="openIcon" data-item="7" data-toggle="tooltip" data-placement="top" title="innovati"><img class="event-slider-menu" src="images/logos/innovati.png"></li>
+				<li class="openIcon" data-item="8" data-toggle="tooltip" data-placement="top" title="creative"><img class="event-slider-menu" src="images/logos/creative.png"></li>
+				<li class="openIcon" data-item="9" data-toggle="tooltip" data-placement="top" title="just like that"><img class="event-slider-menu" src="images/logos/fun.png"></li>
+				<li class="openIcon" data-item="10" data-toggle="tooltip" data-placement="top" title="elevation"><img class="event-slider-menu" src="images/logos/fun.png"></li>
+			</ul>
+			<ul id="main-menu-items" style="position: absolute; width: 100%; margin: 0 auto">
+				<li data-toggle="tooltip" data-placement="top" title="events" id="event-menu-reveal"><img class="main-menu-icon" src="images/logos/newron.png"></li>
+				<li class="openIcon" data-item="11" data-toggle="tooltip" data-placement="top" title="campus ambassdor"><img class="event-slider-menu" src="images/logos/campus_ambassador.png"></li>
+				<li class="openIcon" data-item="12" data-toggle="tooltip" data-placement="top" title="sponsors"><img class="event-slider-menu" src="images/logos/inr_mod.png"></li>
+				<li class="openIcon" data-item="13" data-toggle="tooltip" data-placement="top" title="the team"><img class="event-slider-menu" src="images/logos/team.png"></li>
+				<li data-toggle="tooltip" data-placement="top" title="mega events" id="mega-event-menu-reveal"><img class="main-menu-icon" src="images/logos/newron.png"></li>
 			</ul>
 			<ul id="other-menu-icons">
-				<li data-item="11" data-toggle="tooltip" data-placement="top" title="campus ambassdor"><img class="event-slider-menu" src="images/logos/campus_ambassador.png"></li>
-				<li data-item="12" data-toggle="tooltip" data-placement="top" title="sponsors"><img class="event-slider-menu" src="images/logos/inr_mod.png"></li>
-				<li data-item="13" data-toggle="tooltip" data-placement="top" title="the team"><img class="event-slider-menu" src="images/logos/team.png"></li>
+				<li class="openIcon" data-item="14" data-toggle="tooltip" data-placement="top" title="campus ambassdor"><img class="event-slider-menu" src="images/logos/campus_ambassador.png"></li>
+				<li class="openIcon" data-item="15" data-toggle="tooltip" data-placement="top" title="sponsors"><img class="event-slider-menu" src="images/logos/inr_mod.png"></li>
+				<li class="openIcon" data-item="16" data-toggle="tooltip" data-placement="top" title="the team"><img class="event-slider-menu" src="images/logos/team.png"></li>
 			</ul>
-			<div class="clearfix"></div>
+			<script type="text/javascript">
+				var eventMenuReveal = false;
+				var megaEventMenuReveal = false;
+				$("#event-menu-icons li").hide();
+				$("#other-menu-icons li").hide();
+				$("#event-menu-reveal").click(function(){
+					if(eventMenuReveal ==  false){
+						var eventIcons = $("#event-menu-icons li");
+						revealMenu(eventIcons);
+						eventMenuReveal = true;
+					}
+					else{
+						var eventIcons = $("#event-menu-icons li").get().reverse();
+						hideMenu(eventIcons);
+						eventMenuReveal = false;
+					}
+				});
+
+				$("#mega-event-menu-reveal").click(function(){
+					if(megaEventMenuReveal ==  false){
+						var eventIcons = $("#other-menu-icons li").get().reverse();
+						revealMenu(eventIcons);
+						megaEventMenuReveal = true;
+					}
+					else{
+						var eventIcons = $("#other-menu-icons li");
+						hideMenu(eventIcons);
+						megaEventMenuReveal = false;
+					}
+				});
+
+				revealMenu = function(elList){
+					$.each(elList, function(key, el){
+						$(el).delay(100*key).fadeIn(200);
+					});
+				}
+				hideMenu = function(elList){
+					console.log("Hide");
+					$.each(elList, function(key,el){
+						$(el).delay(100*key).fadeOut(200);
+					});
+				}
+			</script>
+			</div>
 		</nav>
 		<!-- Grid -->
 		<!--
@@ -217,7 +269,7 @@
 				<div class="slide__mover">
 					<div class="zoomer flex-center">
 						<div class="preview rounded">
-							<img src="images/robot_mod.png" height="200"/>
+							<img src="images/categories/elevation.png" height="200"/>
 							<div class="zoomer__area zoomer__area--size-1"></div>
 						</div>
 					</div>
@@ -231,7 +283,7 @@
 				<div class="slide__mover">
 					<div class="zoomer flex-center">
 						<div class="preview rounded">
-							<img src="images/robot_mod.png" height="200"/>
+							<img src="images/categories/ca.png" height="200"/>
 							<div class="zoomer__area zoomer__area--size-1"></div>
 						</div>
 					</div>
@@ -259,7 +311,7 @@
 				<div class="slide__mover">
 					<div class="zoomer flex-center">
 						<div class="preview rounded">
-							<img src="images/robot_mod.png" height="200"/>
+							<img src="images/categories/Team.png" height="200"/>
 							<div class="zoomer__area zoomer__area--size-1"></div>
 						</div>
 					</div>
@@ -434,9 +486,50 @@
 				<div class="content__item-inner" style="width: 100%;">
 					<h2>Food For Fun</h2>
 					<div class="row">
-						<div class="col-md-4 event-name">Flawless</div>
-						<div class="col-md-4 event-name">Bug Hunt</div>
-						<div class="col-md-4 event-name">CryptoQuest</div>
+						<div class="col-md-4 event">
+							<img src="images/icons/computeaid/flawless.png" class="event-image">
+							<div class="event-name" data-name="xquizit">X-Quiz'it</div>
+							<div class="border-bottom"></div>
+						</div>
+						<div class="col-md-4 event">
+							<img src="images/icons/computeaid/flawless.png" class="event-image">
+							<div class="event-name" data-name="casestudy">Case Study</div>
+							<div class="border-bottom"></div>
+						</div>
+						<div class="col-md-4 event">
+							<img src="images/icons/computeaid/flawless.png" class="event-image">
+							<div class="event-name" data-name="creation">Creation</div>
+							<div class="border-bottom"></div>
+						</div>
+						<div class="col-md-4 event">
+							<img src="images/icons/computeaid/flawless.png" class="event-image">
+							<div class="event-name" data-name="foodrelay">Food Relay</div>
+							<div class="border-bottom"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Money Matters -->
+			<div class="content__item" id="moneymatters" style="width: 100%;">
+				<img class="content__item-img rounded-right" src="images/robot_mod.png" alt="Innovati" />
+				<div class="content__item-inner" style="width: 100%;">
+					<h2>Money Matters</h2>
+					<div class="row">
+						<div class="col-md-4 event">
+							<img src="images/icons/moneymatters/bplan.png" class="event-image">
+							<div class="event-name" data-name="bplan">B-Plan</div>
+							<div class="border-bottom"></div>
+						</div>
+						<div class="col-md-4 event">
+							<img src="images/icons/moneymatters/bquiz.png" class="event-image">
+							<div class="event-name" data-name="bquiz">B-Quiz</div>
+							<div class="border-bottom"></div>
+						</div>
+						<div class="col-md-4 event">
+							<img src="images/icons/computeaid/flawless.png" class="event-image">
+							<div class="event-name" data-name="addomedia">Addomedia</div>
+							<div class="border-bottom"></div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -446,10 +539,11 @@
 				<div class="content__item-inner" style="width: 100%;">
 					<h2>Innovati</h2>
 					<div class="row">
-						<div class="col-md-3"></div>
-						<div class="col-md-3"></div>
-						<div class="col-md-3"></div>
-						<div class="col-md-3"></div>
+						<div class="col-md-4 event">
+							<img src="images/icons/computeaid/flawless.png" class="event-image">
+							<div class="event-name" data-name="projectview">Project View</div>
+							<div class="border-bottom"></div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -459,9 +553,16 @@
 				<div class="content__item-inner" style="width: 100%;">
 					<h2>Just Like That</h2>
 					<div class="row">
-						<div class="col-md-4 event-name">Flawless</div>
-						<div class="col-md-4 event-name">Bug Hunt</div>
-						<div class="col-md-4 event-name">CryptoQuest</div>
+						<div class="col-md-4 event">
+							<img src="images/icons/computeaid/flawless.png" class="event-image">
+							<div class="event-name" data-name="khuljasimsim">Khul Ja Sim Sim</div>
+							<div class="border-bottom"></div>
+						</div>
+						<div class="col-md-4 event">
+							<img src="images/icons/justlikethat/selfie.png" class="event-image">
+							<div class="event-name" data-name="getselfieishwithx">Get Selfie-ish With X</div>
+							<div class="border-bottom"></div>
+						</div>
 					</div>
 				</div>
 			</div>		
@@ -471,9 +572,16 @@
 				<div class="content__item-inner" style="width: 100%;">
 					<h2>Create It</h2>
 					<div class="row">
-						<div class="col-md-4 event-name">Flawless</div>
-						<div class="col-md-4 event-name">Bug Hunt</div>
-						<div class="col-md-4 event-name">CryptoQuest</div>
+						<div class="col-md-4 event">
+							<img src="images/icons/justlikethat/selfie.png" class="event-image">
+							<div class="event-name" data-name="ragstoriches">Rags to Riches</div>
+							<div class="border-bottom"></div>
+						</div>
+						<div class="col-md-4 event">
+							<img src="images/icons/justlikethat/selfie.png" class="event-image">
+							<div class="event-name" data-name="mekanix">Mekanix</div>
+							<div class="border-bottom"></div>
+						</div>
 					</div>
 				</div>
 			</div>	
@@ -766,7 +874,6 @@
 	<footer>
 		Made with love
 	</footer>
-	<script src="js/jquery.js"></script>
 	<script src="js/classie.js"></script>
 	<script type="text/javascript" src="js/jquery.color-2.1.2.min.js"></script>
 	<script type="text/javascript" src="js/jquery.homeycombs.js"></script>
@@ -782,10 +889,13 @@
 			$(".inner-text").css("line-height",$(".hex_inner").css("height"));
 			$('.event').line(animationDuration, "2px", "bottom","onhover", backgroundColor);
 			$(".event").click(function(){
+				name = $(this).find(".event-name").data("name");
+				$("#modal-event-title").html(name);
 				$("#event-modal").modal('show');
+
 			});
 
-			 $('[data-toggle="tooltip"]').tooltip();
+			$('[data-toggle="tooltip"]').tooltip();
 
 		});
 
