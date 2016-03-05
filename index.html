@@ -18,8 +18,9 @@
 	<link rel="stylesheet" type="text/css" href="css/custom.css" />
 		<script src="js/jquery.js"></script>
 	<script src="js/modernizr.custom.js"></script>
+	<script type="text/javascript" src="http://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>
 </head>
-<body>
+<body data-anm=".anm">
 	<!-- Main container -->
 	<div class="container">
 		<!-- Blueprint header -->
@@ -83,6 +84,17 @@
 						hideMenu(eventIcons);
 						eventMenuReveal = false;
 					}
+				});
+
+				$(".openIcon").hover(function(){
+					var top = $(this).find('img').offset().top -10;
+					console.log(top);
+					$(this).find('img').transition({scale:1.4});
+					//$(this).find('img').offset({top:top});
+				}, function(){
+					var top = $(this).find('img').offset().top +10;
+					$(this).find('img').transition({scale:1});
+					//$(this).find('img').offset({top:top});
 				});
 
 				$("#mega-event-menu-reveal").click(function(){
@@ -331,9 +343,11 @@
 		<div class="slide slide--current" data-content="edge">
 				<div class="slide__mover">
 					<div class="zoomer flex-center">
-						<div class="preview">
-							<img src="images/imac.png"/>
-							<div class="zoomer__area zoomer__area--size-2"></div>
+						<div class="preview" id="landing-screen">
+							<img src="images/edge.png" class="spotlight">
+							<img src="images/clouds.png" class="cloud anm" id="cloud1" data-speed-x="-16">
+							<img src="images/clouds.png" class="cloud anm" id="cloud2" data-speed-x="-16">
+							<img src="images/clouds.png" class="cloud anm" id="cloud3" data-speed-x="-16">
 						</div>
 					</div>
 				</div>
@@ -341,6 +355,37 @@
 		</section>
 		<!-- /slid+er-->
 		<style type="text/css">
+		#landing-screen{
+			position: relative;
+			height: 100%;
+			width: 100%;
+			text-align: center;
+		}
+		.cloud{
+			position: absolute;
+			bottom: 0px;
+			height: 120px!important
+		}
+		#cloud1{
+			left: 52%;
+			height: 140px!important;
+		}
+		#cloud2{
+			left: 28%;
+			height: 140px!important;
+		}
+		#cloud3{
+			left: 55%;
+			top: 10%;
+		}
+		.spotlight{
+			position: absolute;
+			bottom: 0px;
+			left: 50%;
+			height: 300px!important;
+			margin-left: -275px;
+		}
+
 			.content__item-inner h2{
 				font-family: 'Arkhip';
 			}
@@ -882,9 +927,11 @@
 	<script src="js/lines.js"></script>
 	<script type="text/javascript" src="js/visible.js"></script>
 	<script type="text/javascript" src="js/border.js"></script>
+	<script type="text/javascript" src="js/mousemove.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<script type="text/javascript">
+
 		$(document).ready(function(){
 			$(".inner-text").css("line-height",$(".hex_inner").css("height"));
 			$('.event').line(animationDuration, "2px", "bottom","onhover", backgroundColor);
@@ -896,8 +943,12 @@
 			});
 
 			$('[data-toggle="tooltip"]').tooltip();
-
 		});
+
+		
+
+anm.on();
+
 
 
 	</script>
