@@ -40,7 +40,7 @@
 		// close content control
 		closeContentCtrl = contentEl.querySelector('button.button--close'),
 		// index of current item
-		current = 0,
+		current = 14,
 		// check if an item is "open"
 		isOpen = false,
 		isFirefox = typeof InstallTrigger !== 'undefined',
@@ -286,23 +286,31 @@
 			nextEl = itemNext.querySelector('.slide__mover'),
 			nextTitleEl = itemNext.querySelector('.slide-title');
 
-		
-		// animate the current element out
-		dynamics.animate(currentEl, { opacity: 0, translateX: dir === 'right' ? -1*currentEl.offsetWidth/2 : currentEl.offsetWidth/2, rotateZ: dir === 'right' ? -10 : 10 }, {
-			type: dynamics.spring,
-			duration: 2000,
-			friction: 600,
-			complete: function() {
-				dynamics.css(itemCurrent, { opacity: 0, visibility: 'hidden' });
-			}
-		});
-
+		try{
+			// animate the current element out
+			dynamics.animate(currentEl, { opacity: 0, translateX: dir === 'right' ? -1*currentEl.offsetWidth/2 : currentEl.offsetWidth/2, rotateZ: dir === 'right' ? -10 : 10 }, {
+				type: dynamics.spring,
+				duration: 2000,
+				friction: 600,
+				complete: function() {
+					dynamics.css(itemCurrent, { opacity: 0, visibility: 'hidden' });
+				}
+			});
+		}
+		catch(e){
+			console.log(e);
+		}
+		try{
 		// animate the current title out
-		dynamics.animate(currentTitleEl, { translateX: dir === 'right' ? -250 : 250, opacity: 0 }, {
-			type: dynamics.bezier,
-			points: [{"x":0,"y":0,"cp":[{"x":0.2,"y":1}]},{"x":1,"y":1,"cp":[{"x":0.3,"y":1}]}],
-			duration: 450
-		});
+			dynamics.animate(currentTitleEl, { translateX: dir === 'right' ? -250 : 250, opacity: 0 }, {
+				type: dynamics.bezier,
+				points: [{"x":0,"y":0,"cp":[{"x":0.2,"y":1}]},{"x":1,"y":1,"cp":[{"x":0.3,"y":1}]}],
+				duration: 450
+			});
+		}
+		catch(e){
+			console.log(e);
+		}
 
 		// set the right properties for the next element to come in
 		dynamics.css(itemNext, { opacity: 1, visibility: 'visible' });
