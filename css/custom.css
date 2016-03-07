@@ -21,6 +21,12 @@ ul li{
 }
 
 /* Navigation */
+.shadowed {
+    -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
+    filter: url("data:image/svg+xml;utf8,<svg height='0' xmlns='http://www.w3.org/2000/svg'><filter id='drop-shadow'><feGaussianBlur in='SourceAlpha' stdDeviation='4'/><feOffset dx='12' dy='12' result='offsetblur'/><feFlood flood-color='rgba(0,0,0,0.5)'/><feComposite in2='offsetblur' operator='in'/><feMerge><feMergeNode/><feMergeNode in='SourceGraphic'/></feMerge></filter></svg>#drop-shadow");
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
 
 #main-menu-items{
     position: absolute;
@@ -290,4 +296,42 @@ ul li{
 }
 .tooltip-arrow{
   border: none;
+}
+
+/* Contact Modal */
+.modal-body{
+  color: black;
+  font-family: "Source Sans Pro";
+}
+#modal-event-contacts .row{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.modal-event-contact-info{
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16) inset, 0 2px 10px 0 rgba(0, 0, 0, 0.12) inset;
+    background: #F1EFEF;
+    padding: 10px;
+}
+.modal-event-contact-name{
+  text-transform: uppercase;
+  border-bottom: 2px solid #F44336;
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.modal-event-contact-info i {
+    width: 25px;
+}
+#modal-event-name{
+  color: #F44336;
+  font-size: 1.5em;
+  border-bottom: 1px solid rgba(130, 127, 127, 0.16);
+}
+#modal-event-description{
+    text-align: justify;
+    margin-bottom: 20px;
+}
+.modal-event-rules{
+    margin-bottom: 20px;
 }

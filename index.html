@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Edge X</title>
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
 	 <link rel="icon" href="images/logos/fav-icon.png" type="image/x-icon" />
 	 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<!-- Feather Icons -->
@@ -465,28 +466,28 @@
 				<div class="content__item-inner" style="width: 100%;">
 					<h2>Compute Aid</h2>
 					<div class="row">
-						<div class="col-md-4 event">
+						<div class="col-md-4 event" data-id="1">
 							<img src="images/icons/computeaid/flawless.png" class="event-image">
 							<div class="event-name" data-name="flawless">Flawless</div>
 							<div class="border-bottom"></div>
 						</div>
-						<div class="col-md-4 event">
+						<div class="col-md-4 event" data-id="2">
 							<img src="images/icons/computeaid/Bug_Hunt.png" class="event-image">
 							<div class="event-name" data-name="bughunt">Bug Hunt</div>
 						</div>
-						<div class="col-md-4 event">
+						<div class="col-md-4 event" data-id="3">
 							<img src="images/icons/computeaid/Crypto_quest.png" class="event-image">
 							<div class="event-name" data-name="cryptoquest">Crypto Quest</div>
 						</div>
-						<div class="col-md-4 event">
+						<div class="col-md-4 event" data-id="4">
 							<img src="images/icons/computeaid/Code_mart.png" class="event-image">
 							<div class="event-name" data-name="codemart">Code Mart</div>
 						</div>
-						<div class="col-md-4 event">
+						<div class="col-md-4 event" data-id="5">
 							<img src="images/icons/computeaid/Code_out.png" class="event-image">
 							<div class="event-name" data-name="codeout">Code Out</div>
 						</div>
-						<div class="col-md-4 event">
+						<div class="col-md-4 event" data-id="6">
 							<img src="images/icons/computeaid/Game_of_zones.png" class="event-image">
 							<div class="event-name" data-name="gameofzones">Game of Zones</div>
 						</div>
@@ -499,42 +500,42 @@
 				<div class="content__item-inner" style="width: 100%;">
 					<h2>Cyber Crusade</h2>
 					<div class="row">
-						<div class="col-md-4 event">
+						<div class="col-md-4 event" data-id="8">
 							<img src="images/icons/gaming/cs.png" class="event-image">
 							<div class="event-name" data-name="cscollegeleague">CS College League</div>
 							<div class="border-bottom"></div>
 						</div>
-						<div class="col-md-4 event">
+						<div class="col-md-4 event" data-id="7">
 							<img src="images/icons/gaming/cs_go.png" class="event-image">
 							<div class="event-name" data-name="csproleague">CS Pro League</div>
 							<div class="border-bottom"></div>
 						</div>
-						<div class="col-md-4 event">
+						<div class="col-md-4 event" data-id="9">
 							<img src="images/icons/gaming/dota.png" class="event-image">
 							<div class="event-name" data-name="dota">Dota</div>
 							<div class="border-bottom"></div>
 						</div>
-						<div class="col-md-4 event">
+						<div class="col-md-4 event" data-id="10">
 							<img src="images/icons/gaming/mortal_kombat.png" class="event-image">
 							<div class="event-name" data-name="mortalkombat">Mortal Kombat</div>
 							<div class="border-bottom"></div>
 						</div>
-						<div class="col-md-4 event">
+						<div class="col-md-4 event" data-id="11">
 							<img src="images/icons/gaming/nfs.png" class="event-image">
 							<div class="event-name" data-name="needforspeed">Need For Speed Most Wanted</div>
 							<div class="border-bottom"></div>
 						</div>
-						<div class="col-md-4 event">
+						<div class="col-md-4 event" data-id="12">
 							<img src="images/icons/gaming/nfs.png" class="event-image">
 							<div class="event-name" data-name="needforspeed">Need For Speed 12</div>
 							<div class="border-bottom"></div>
 						</div>
-						<div class="col-md-4 event">
+						<div class="col-md-4 event" data-id="14">
 							<img src="images/icons/gaming/fifa_11.png" class="event-image">
 							<div class="event-name" data-name="fifacollegeleague">FIFA College League</div>
 							<div class="border-bottom"></div>
 						</div>
-						<div class="col-md-4 event">
+						<div class="col-md-4 event" data-id="13">
 							<img src="images/icons/gaming/fifa_15.png" class="event-image">
 							<div class="event-name" data-name="fifaproleague">FIFA Pro League</div>
 							<div class="border-bottom"></div>
@@ -941,8 +942,22 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="modal-event-name">Modal title</h4>
       </div>
-      <div class="modal-body" id="modal-event-description">
-        <p>There is a nice saying by a great man that "A designer knows he has achieved perfection not when there is nothing left to add but when there is nothing left to take away." Indeed a designer is a creator, creator of every single thing which we witness today. Starting from a needle to a spaceship, everywhere designers are required. And they need to be perfect and flawless. If you also think that you are with the caliber, then show that using coding as your sword and achieving victory.</p>
+      <div class="modal-body">
+      	<div id="modal-event-description">
+        There is a nice saying by a great man that "A designer knows he has achieved perfection not when there is nothing left to add but when there is nothing left to take away." Indeed a designer is a creator, creator of every single thing which we witness today. Starting from a needle to a spaceship, everywhere designers are required. And they need to be perfect and flawless. If you also think that you are with the caliber, then show that using coding as your sword and achieving victory.
+        </div>
+        <div id="modal-event-rules"><span>Rules : </span><span id="modal-event-rules-value"></span></div>
+        <div id="modal-event-contacts">
+        	<div class="row">
+        		<div class="col-md-6 modal-event-contact-info">
+        			<div class="modal-event-contact-name">Palash Chatterjee</div>
+        			<div class="modal-event-contact-facebook"><i class="fa fa-facebook"></i> palash.chatterjee</div>
+        			<div class="modal-event-contact-phone"><i class="fa fa-phone"></i> 9051333843</div>
+        			<div class="modal-event-contact-email"><i class="fa fa-envelope"></i> palash@edg.co.in</div>
+        		</div>
+        		<div class="col-md-6 modal-event-contact-info"></div>
+        	</div>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -976,14 +991,32 @@
 				name = $(this).find(".event-name").data("name");
 				$("#modal-event-title").html(name);
 				$("#event-modal").modal('show');
-
+				get_event_details($(this).data("id"));
 			});
 
 			$('[data-toggle="tooltip"]').tooltip();
 		});
 
 		
-
+get_event_details = function(event_id){
+	$.ajax({
+			url:'details.php',
+			type: 'POST',
+			data: {event_id:event_id},
+			dataType:'json',
+			success:function(result){
+				$("#modal-event-title").html(result.name);
+				if(result.file){
+					$("#modal-event-rules-value").html(result.file);
+				else
+					$("#modal-event-rules-value").html("Rules will be updated soon");
+				}
+				if(result.desc){
+					$("#modal-event-description").html(result.desc);
+				}
+			}
+	});
+}
 //anm.on();
 
 
